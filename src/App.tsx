@@ -1,15 +1,14 @@
 import * as React from "react";
-import { ChakraProvider, Box, Text, VStack, Grid } from "@chakra-ui/react";
-import theme from "theme";
+import { useRoutes } from "react-router-dom";
 
-export const App = () => (
-    <ChakraProvider theme={theme}>
-        <Box textAlign="center" fontSize="xl">
-            <Grid minH="100vh" p={3}>
-                <VStack spacing={8}>
-                    <Text>React + Chakra UI + React-Query + Axios + TypeScript</Text>
-                </VStack>
-            </Grid>
-        </Box>
-    </ChakraProvider>
-);
+import LandingPage from "pages/LandingPage";
+import UsersPage from "pages/UsersPage";
+import { navigationList } from "utils/constants";
+
+export default function App() {
+    const routes = useRoutes([
+        { path: "/", element: <LandingPage navLinks={navigationList} /> },
+        { path: "users", element: <UsersPage /> }
+    ]);
+    return routes;
+}
