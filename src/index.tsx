@@ -8,14 +8,19 @@ import "inter-ui/inter.css";
 import "index.css";
 import { BrowserRouter } from "react-router-dom";
 import theme from "theme";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
     <React.StrictMode>
         <ColorModeScript />
         <ChakraProvider theme={theme}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
+            <QueryClientProvider client={queryClient}>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </QueryClientProvider>
         </ChakraProvider>
     </React.StrictMode>,
     document.getElementById("root")
