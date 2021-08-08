@@ -7,7 +7,7 @@ export const App = () => (
         <Box textAlign="center" fontSize="xl">
             <Grid minH="100vh" p={3}>
                 <VStack spacing={8}>
-                    <Text>React + Chakra UI + React-Query</Text>
+                    <Text>React + Chakra UI + React-Query + Axios</Text>
                 </VStack>
             </Grid>
         </Box>
