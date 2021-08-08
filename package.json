@@ -2,6 +2,7 @@
     "name": "reakra",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://ahmedsomaa.github.io/reakra/",
     "dependencies": {
         "@chakra-ui/react": "^1.6.5",
         "@emotion/react": "^11.4.1",
